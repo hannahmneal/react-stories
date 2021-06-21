@@ -5,6 +5,24 @@ import LocalAtmIcon from "@material-ui/icons/LocalAtm"; // Revenue / insights
 import { navigate } from "@reach/router";
 import { Tabs, Tab } from "@material-ui/core";
 
+const tabsArray = [
+  {
+    icon: <StorefrontIcon />,
+    label: "Listings",
+    value: "listings",
+  },
+  {
+    icon: <ReceiptIcon />,
+    label: "Orders",
+    value: "orders",
+  },
+  {
+    icon: <LocalAtmIcon />,
+    label: "Insights",
+    value: "insights",
+  },
+];
+
 const NavTabs = () => {
   const [choice, makeChoice] = useState("listings");
 
@@ -35,30 +53,16 @@ const NavTabs = () => {
       textColor="primary"
       aria-label="icon tabs example"
     >
-      <Tab
-        icon={<StorefrontIcon />}
-        label="Listings"
-        onClick={() => {
-          handleNavSelect("listings");
-        }}
-        value="listings"
-      />
-      <Tab
-        icon={<ReceiptIcon />}
-        label="Orders"
-        onClick={() => {
-          handleNavSelect("orders");
-        }}
-        value="orders"
-      />
-      <Tab
-        icon={<LocalAtmIcon />}
-        label="Insights"
-        onClick={() => {
-          handleNavSelect("insights");
-        }}
-        value="insights"
-      />
+      {tabsArray.map((tab) => (
+        <Tab
+          icon={tab.icon}
+          label={tab.label}
+          onClick={() => {
+            handleNavSelect(tab.value);
+          }}
+          value={tab.value}
+        />
+      ))}
     </Tabs>
   );
 };

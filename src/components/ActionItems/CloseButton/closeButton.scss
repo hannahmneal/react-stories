@@ -1,0 +1,29 @@
+.closeButton_container {
+  margin: 0.5rem 1.5rem;
+}
+
+@media screen and (max-width: 320px) {
+  .closeButton_container {
+    position: unset;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 677px) {
+  .closeButton_container {
+    position: unset;
+    display: flex;
+  }
+}
+
+.closeButton_wrapper {
+}
+
+.closeButton {
+  padding: 0px;
+  border: none;
+}
+
+.closeButton_icon {
+  fill: #2c5364;
+}

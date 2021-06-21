@@ -1,4 +1,10 @@
 // Import Bootstrap SCSS from node modules
 // @import "~bootstrap/scss/bootstrap.scss";
 
-@import "../src/styles/banner.scss";
+// @import "../src/styles";
+@import "../src/components/ActionItems/Button/button.css";
+@import "../src//components/ActionItems/CloseButton/closeButton.scss";
+@import "../src//components/Elements/Banner/banner.scss";
+@import "../src//components/Elements/BannerText/bannerText.scss";
+@import "../src//components/Elements/Header/header.css";
+@import "../src//components/Navigation/Tabs/tabs.scss";

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "../ActionItems/Button";
+import { Button } from "../index";
 
 export default {
   title: "Action Items/Button",
@@ -15,6 +15,25 @@ export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
   label: "Button",
+  backgroundColor: `transition: all 1s ease-out;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border-color: transparent;
+  border-bottom-style: none;
+  max-width: 100%;
+  top: 0;
+  z-index: 100;
+  position: sticky;
+  background: #2bc0e4; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #eaecc6,
+    #2bc0e4
+  );
+  background: linear-gradient(
+    to left,
+    #eaecc6,
+    #2bc0e4
+  )`,
 };
 
 export const Secondary = Template.bind({});

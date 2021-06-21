@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import "../../styles/banner.scss";
+import "./closeButton.scss";
 import IconButton from "@material-ui/core/IconButton";
 import HighlightOffRoundedIcon from "@material-ui/icons/HighlightOffRounded";
 
-const BannerCloseButton = ({ fade, setFade, hide, setHide }) => {
+const CloseButton = ({ fade, setFade, hide, setHide }) => {
   const handleBannerClick = () => {
     setFade(true);
     setHide(true);
@@ -15,24 +15,24 @@ const BannerCloseButton = ({ fade, setFade, hide, setHide }) => {
   }, [hide, setFade]);
 
   return (
-    <div className="banner_button-wrapper">
-      <div className="banner_button-container">
+    <div className="closeButton-wrapper">
+      <div className="closeButton-container">
         <IconButton
-          id="banner_close-button"
-          className="banner_close-button"
+          id="closeButton"
+          className="closeButton"
           onClick={(e) => {
             e.preventDefault();
             handleBannerClick();
           }}
         >
-          <HighlightOffRoundedIcon id="banner_icon" />
+          <HighlightOffRoundedIcon id="closeButton_icon" />
         </IconButton>
       </div>
     </div>
   );
 };
 
-BannerCloseButton.propTypes = {
+CloseButton.propTypes = {
   /**
    * Boolean that signifies whether the banner should begin its fade animation styles (if false, the banner is not fading; if true, the banner is fading)
    */
@@ -51,11 +51,11 @@ BannerCloseButton.propTypes = {
   setHide: PropTypes.func,
 };
 
-BannerCloseButton.defaultProps = {
+CloseButton.defaultProps = {
   fade: false,
   setFade: undefined,
   hide: false,
   setHide: undefined,
 };
 
-export default BannerCloseButton;
+export default CloseButton;
